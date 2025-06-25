@@ -10,3 +10,24 @@ def char_counter(text):
         dict_[char] += 1
     return dict_
 
+def sort_list(dict):
+    def per(char):
+        return char["num"]
+    list_ = []
+    for i in dict:
+        if i.isalpha():
+            a = {}
+            a["char"]= i
+            a["num"] = dict[i]
+            list_.append(a)
+            list_.sort(reverse=True, key=per)
+
+    return list_
+    
+
+
+
+
+
+
+
